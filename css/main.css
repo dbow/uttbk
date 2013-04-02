@@ -108,7 +108,7 @@ textarea {
 
 #uttbk-calendar .ui-widget-content .ui-state-hover {
   background: none;
-  border: none;
+  border: 1px solid transparent;
 }
 
 .ui-datepicker-calendar td .ui-state-default,
