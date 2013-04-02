@@ -106,7 +106,7 @@ textarea {
   cursor: pointer;
 }
 
-#uttbk-calendar .ui-widget-content .ui-state-hover {
+#uttbk-calendar .ui-datepicker-header .ui-state-hover {
   background: none;
   border: 1px solid transparent;
 }
