@@ -28,6 +28,7 @@ var uttbk = uttbk || {};
         $seatsEl = $('#uttbk-seats'),
         currMonth,
         currYear,
+        popupLock,
         rapidFireEnterBlocker,
         rapidFireExitBlocker;
 
@@ -56,7 +57,13 @@ var uttbk = uttbk || {};
 
         $calendarEl.on('mouseenter', '.dinner-date', this.showPopup);
         $calendarEl.on('mouseleave', '.dinner-date', this.hidePopup);
-
+        $popupEl.on('mouseenter', undefined, function (e) {
+          popupLock = true;
+        });
+        $popupEl.on('mouseleave', undefined, function (e) {
+          popupLock = false;
+          $popupEl.hide();
+        });
       },
 
       showPopup: function(e) {
@@ -95,6 +102,9 @@ var uttbk = uttbk || {};
           window.clearTimeout(rapidFireExitBlocker);
         }
         rapidFireExitBlocker = window.setTimeout(function() {
+          if (popupLock) {
+            return;
+          }
           $popupEl.hide();
         }, 30);
       },
