@@ -99,7 +99,7 @@ textarea {
   margin-top: 2px;
 }
 
-.ui-datepicker-header.ui-widget-header {
+.ui-datepicker .ui-datepicker-header.ui-widget-header {
   background: #A10000;
   color: white;
   border-radius: 0;
