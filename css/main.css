@@ -101,6 +101,7 @@ textarea {
   color: white;
   border-radius: 0;
   border: none;
+  box-shadow: 1px -1px 2px #454545, -1px 0px 2px #454545;
 }
 
 .ui-datepicker-prev,
@@ -115,7 +116,11 @@ textarea {
 
 #uttbk-calendar .ui-datepicker {
   padding: 0;
-  border-radius: 0;
+  border-radius: 2px;
+}
+
+#uttbk-calendar .ui-widget-content {
+  border: none;
 }
 
 .ui-datepicker-calendar td .ui-state-default,
